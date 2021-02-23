@@ -1,7 +1,8 @@
-package com.example.mpets;
+package com.example.mpets.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mpets.Models.RegisterPojo;
+import com.example.mpets.R;
 import com.example.mpets.RestApi.ManagerAll;
 import com.example.mpets.Utils.Warnings;
 import com.google.android.material.textfield.TextInputEditText;
@@ -57,6 +59,15 @@ public class SignUpActivity extends AppCompatActivity {
 
             }
         });
+
+        signInGecis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(SignUpActivity.this,SignInActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     public void delete(){
@@ -76,6 +87,9 @@ public class SignUpActivity extends AppCompatActivity {
                 if(response.body().isTf()){
 
                     Toast.makeText(getApplicationContext(), response.body().getText(), Toast.LENGTH_LONG).show();
+                    Intent intent=new Intent(SignUpActivity.this,MainActivity.class);
+                    startActivity(intent);
+                    finish();
                 }else{
                     Toast.makeText(getApplicationContext(), response.body().getText(), Toast.LENGTH_LONG).show();
                 }
