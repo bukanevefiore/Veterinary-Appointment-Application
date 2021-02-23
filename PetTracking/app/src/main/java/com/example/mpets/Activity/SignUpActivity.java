@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.mpets.Models.RegisterPojo;
 import com.example.mpets.R;
 import com.example.mpets.RestApi.ManagerAll;
+import com.example.mpets.Utils.GetSharedPreferences;
 import com.example.mpets.Utils.Warnings;
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -87,7 +88,7 @@ public class SignUpActivity extends AppCompatActivity {
                 if(response.body().isTf()){
 
                     Toast.makeText(getApplicationContext(), response.body().getText(), Toast.LENGTH_LONG).show();
-                    Intent intent=new Intent(SignUpActivity.this,MainActivity.class);
+                    Intent intent=new Intent(SignUpActivity.this,SignInActivity.class);
                     startActivity(intent);
                     finish();
                 }else{

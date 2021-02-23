@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.mpets.Models.LoginPojo;
 import com.example.mpets.R;
 import com.example.mpets.RestApi.ManagerAll;
+import com.example.mpets.Utils.GetSharedPreferences;
 import com.example.mpets.Utils.Warnings;
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -81,6 +82,10 @@ public class SignInActivity extends AppCompatActivity {
 
                     Toast.makeText(getApplicationContext(), response.body().getText(), Toast.LENGTH_LONG).show();
                     Intent intent=new Intent(SignInActivity.this,MainActivity.class);
+                    // kalıcı kaydı gerçekleştirmek için shared preferences sınıfını çağırıyoruz
+                    GetSharedPreferences getSharedPreferences=new GetSharedPreferences(SignInActivity.this);
+                    // set işlemleri
+                    getSharedPreferences.setSession(response.body().getId(),response.body().getUserName(),response.body().getMailAdres());
                     startActivity(intent);
                     finish();
                 }
