@@ -10,10 +10,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.mpets.Models.RegisterPojo;
+import com.example.mpets.Models.RegisterModel;
 import com.example.mpets.R;
 import com.example.mpets.RestApi.ManagerAll;
-import com.example.mpets.Utils.GetSharedPreferences;
 import com.example.mpets.Utils.Warnings;
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -80,10 +79,10 @@ public class SignUpActivity extends AppCompatActivity {
 
     public void registerRequest(String userMailAdres,String userName,String userPass){
 
-        Call<RegisterPojo> req= ManagerAll.getInstance().kayitOl(userMailAdres,userName,userPass);
-        req.enqueue(new Callback<RegisterPojo>() {
+        Call<RegisterModel> req= ManagerAll.getInstance().kayitOl(userMailAdres,userName,userPass);
+        req.enqueue(new Callback<RegisterModel>() {
             @Override
-            public void onResponse(Call<RegisterPojo> call, Response<RegisterPojo> response) {
+            public void onResponse(Call<RegisterModel> call, Response<RegisterModel> response) {
 
                 if(response.body().isTf()){
 
@@ -98,7 +97,7 @@ public class SignUpActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<RegisterPojo> call, Throwable t) {
+            public void onFailure(Call<RegisterModel> call, Throwable t) {
 
                 Toast.makeText(getApplicationContext(), Warnings.internetProblemText, Toast.LENGTH_LONG).show();
                 Log.e("registerHata",t.getMessage());

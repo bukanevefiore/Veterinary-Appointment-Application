@@ -1,6 +1,6 @@
 package com.example.mpets.Models;
 
-public class RegisterPojo{
+public class RegisterModel {
 	private boolean tf;
 	private String text;
 

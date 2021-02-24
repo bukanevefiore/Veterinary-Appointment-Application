@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.mpets.Models.LoginPojo;
+import com.example.mpets.Models.LoginModel;
 import com.example.mpets.R;
 import com.example.mpets.RestApi.ManagerAll;
 import com.example.mpets.Utils.GetSharedPreferences;
@@ -74,10 +74,10 @@ public class SignInActivity extends AppCompatActivity {
 
     public void loginRequest(String userName,String password){
 
-        Call<LoginPojo> request= ManagerAll.getInstance().girisYap(userName,password);
-        request.enqueue(new Callback<LoginPojo>() {
+        Call<LoginModel> request= ManagerAll.getInstance().girisYap(userName,password);
+        request.enqueue(new Callback<LoginModel>() {
             @Override
-            public void onResponse(Call<LoginPojo> call, Response<LoginPojo> response) {
+            public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {
                 if(response.body().isTf()){
 
                     Toast.makeText(getApplicationContext(), response.body().getText(), Toast.LENGTH_LONG).show();
@@ -96,7 +96,7 @@ public class SignInActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<LoginPojo> call, Throwable t) {
+            public void onFailure(Call<LoginModel> call, Throwable t) {
 
                 Toast.makeText(getApplicationContext(), Warnings.internetProblemText, Toast.LENGTH_LONG).show();
                 Log.e("loginHata",t.getMessage());

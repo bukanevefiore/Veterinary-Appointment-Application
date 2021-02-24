@@ -1,6 +1,6 @@
 package com.example.mpets.Models;
 
-public class LoginPojo{
+public class LoginModel {
 	private boolean tf;
 	private String mailAdres;
 	private String parola;
