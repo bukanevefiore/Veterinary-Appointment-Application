@@ -1,5 +1,6 @@
 package com.example.mpets.RestApi;
 
+import com.example.mpets.Models.AskQuestionModel;
 import com.example.mpets.Models.LoginModel;
 import com.example.mpets.Models.PetModel;
 import com.example.mpets.Models.RegisterModel;
@@ -34,4 +35,11 @@ public class ManagerAll extends BaseManager {
         Call<List<PetModel>> x=getRestApi().getPets(mus_id);
         return x;
     }
+
+    public Call<AskQuestionModel> soruSor(String id, String soru)
+    {
+        Call<AskQuestionModel> x=getRestApi().soruSor(id,soru);
+        return x;
+    }
+
 }

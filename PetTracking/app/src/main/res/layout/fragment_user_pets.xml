@@ -3,8 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="#DAFFC1"
     android:layout_height="match_parent"
     tools:context=".Fragments.UserPetsFragment">
+   
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+      android:text="MY PETS"
+      android:textSize="25dp"
+      android:textAlignment="center"
+      android:layout_marginTop="5dp"
+      android:textStyle="bold"
+      android:textColor="#3D0F8E">
+
+   </TextView>
 
    <androidx.recyclerview.widget.RecyclerView
        android:layout_width="match_parent"

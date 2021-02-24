@@ -18,6 +18,7 @@ import com.example.mpets.Adapters.PetsAdapter;
 import com.example.mpets.Models.PetModel;
 import com.example.mpets.R;
 import com.example.mpets.RestApi.ManagerAll;
+import com.example.mpets.Utils.GetSharedPreferences;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,10 +30,12 @@ import retrofit2.Response;
 
 public class UserPetsFragment extends Fragment {
 
-    private View view;
-    List<PetModel> petList;
-    PetsAdapter petsAdapter;
+    View view;
     RecyclerView pets_recyclerview;
+    PetsAdapter petsAdapter;
+    List<PetModel> petList;
+    private String mus_id;
+    private GetSharedPreferences getSharedPreferences;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -40,8 +43,9 @@ public class UserPetsFragment extends Fragment {
         // Inflate the layout for this fragment
         view= inflater.inflate(R.layout.fragment_user_pets, container, false);
 
+
         tanimlamalar();
-        getPets("1");
+        getPets(mus_id);
 
         return view;
     }
@@ -51,9 +55,10 @@ public class UserPetsFragment extends Fragment {
 
         petList=new ArrayList<>();
         pets_recyclerview=view.findViewById(R.id.pets_recyclerview);
-        RecyclerView.LayoutManager mng=new LinearLayoutManager(getContext());
+        RecyclerView.LayoutManager mng=new GridLayoutManager(getContext(),2);
         pets_recyclerview.setLayoutManager(mng);
-
+        getSharedPreferences=new GetSharedPreferences(getActivity());
+        mus_id=getSharedPreferences.getSession().getString("id",null);
 
 
     }
@@ -69,7 +74,7 @@ public class UserPetsFragment extends Fragment {
                 {
                     Log.i("aaa",response.body().toString());
                     petList=response.body();
-                    petsAdapter=new PetsAdapter(getContext(),petList);
+                    petsAdapter=new PetsAdapter(petList, getContext());
                     pets_recyclerview.setAdapter(petsAdapter);
                     Toast.makeText(getContext(), "You have"+petList.size()+ "pets in the system\n", Toast.LENGTH_LONG).show();
 

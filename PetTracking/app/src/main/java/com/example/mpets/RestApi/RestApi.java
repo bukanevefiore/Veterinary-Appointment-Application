@@ -1,5 +1,6 @@
 package com.example.mpets.RestApi;
 
+import com.example.mpets.Models.AskQuestionModel;
 import com.example.mpets.Models.LoginModel;
 import com.example.mpets.Models.PetModel;
 import com.example.mpets.Models.RegisterModel;
@@ -25,4 +26,8 @@ public interface RestApi {
     @FormUrlEncoded
     @POST("/veterinary/petlerim.php")
     Call<List<PetModel>> getPets(@Field("musid") String mus_id);
+
+    @FormUrlEncoded
+    @POST("/veterinary/sorusor.php")
+    Call<AskQuestionModel> soruSor(@Field("id") String mus_id, @Field("soru") String soru);
 }

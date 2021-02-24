@@ -6,11 +6,11 @@
 
     <androidx.cardview.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        card_view:cardElevation="2dp"
+        card_view:cardElevation="5dp"
         android:textAlignment="center"
         android:clickable="true"
-        android:layout_margin="2dp"
-        android:backgroundTint="#F0CFF6"
+        android:layout_margin="5dp"
+        card_view:cardBackgroundColor="#F5F0CFF6"
         android:layout_width="match_parent"
         android:layout_height="310dp"
         card_view:cardCornerRadius="15dp">
@@ -19,30 +19,32 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:screenReaderFocusable="true"
             android:layout_margin="2dp">
 
 
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:civ_border_width="1dp"
+                app:civ_border_color="#FF000000"
                 android:layout_width="150dp"
                 android:layout_height="120dp"
                 android:layout_margin="5dp"
-                android:background="@drawable/ic_baseline_campaign_24"
+                android:src="@drawable/golden"
                 android:id="@+id/pet_fragment_image"
                 android:layout_gravity="center"
-                app:civ_border_width="2dp"
-                app:civ_border_color="#FF000000"/>
+                />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pet Name : "
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="30dp"
                 android:id="@+id/pet_name"
-                android:textSize="20dp"
+                android:textSize="15dp"
                 android:textStyle="bold"
                 android:textColor="#6629AF"
-               android:layout_marginLeft="40dp">
+               android:layout_marginLeft="5dp">
 
             </TextView>
             <TextView
@@ -51,10 +53,10 @@
                 android:text="Pet Kind : "
                 android:layout_marginTop="20dp"
                 android:id="@+id/pet_tur_name"
-                android:textSize="20dp"
+                android:textSize="15dp"
                 android:textStyle="bold"
                 android:textColor="#6629AF"
-                android:layout_marginLeft="40dp">
+                android:layout_marginLeft="5dp">
 
             </TextView>
 
@@ -64,10 +66,10 @@
                 android:text="Pet Genus : "
                 android:layout_marginTop="20dp"
                 android:id="@+id/pet_cins_name"
-                android:textSize="20dp"
+                android:textSize="15dp"
                 android:textStyle="bold"
                 android:textColor="#6629AF"
-                android:layout_marginLeft="40dp">
+                android:layout_marginLeft="5dp">
 
             </TextView>
 

@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.mpets.Models.PetModel;
 import com.example.mpets.R;
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.PicassoProvider;
 
 import java.io.IOException;
 import java.util.List;
@@ -24,7 +26,7 @@ public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.ViewHolder>{
     private Context context;
     private List<PetModel> list;
 
-    public PetsAdapter(Context context, List<PetModel> list) {
+    public PetsAdapter(List<PetModel> list, Context context) {
         this.context = context;
         this.list = list;
     }
@@ -45,7 +47,7 @@ public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.ViewHolder>{
         holder.pet_cins_name.setText("Pet Genus : "+list.get(position).petcins.toString());
 
         try {
-            Picasso.get().load(list.get(position).getPetresim()).into(holder.pet_fragment_image);
+            Picasso.get().load("http://192.168.1.4/veterinary/"+list.get(position).getPetresim()).into(holder.pet_fragment_image);
         }catch(Exception e){
             Log.e("resimhata",e.getMessage());
         }
