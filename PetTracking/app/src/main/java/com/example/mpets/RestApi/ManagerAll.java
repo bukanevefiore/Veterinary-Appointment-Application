@@ -1,6 +1,7 @@
 package com.example.mpets.RestApi;
 
 import com.example.mpets.Models.AnswersModel;
+import com.example.mpets.Models.AsiModel;
 import com.example.mpets.Models.AskQuestionModel;
 import com.example.mpets.Models.CampaignModel;
 import com.example.mpets.Models.DeleteAnswerModel;
@@ -60,6 +61,12 @@ public class ManagerAll extends BaseManager {
     public Call<List<CampaignModel>> getKampanya()
     {
         Call<List<CampaignModel>> x=getRestApi().getKampanya();
+        return x;
+    }
+
+    public Call<List<AsiModel>> getAsi(String id)
+    {
+        Call<List<AsiModel>> x=getRestApi().getAsi(id);
         return x;
     }
 

@@ -92,6 +92,8 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+                changeFragments.change(new AsiFragment());
+
             }
         });
         card_view_soru.setOnClickListener(new View.OnClickListener() {

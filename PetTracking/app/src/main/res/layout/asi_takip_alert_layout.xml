@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/arkaplan"
+    android:layout_height="wrap_content"
+    >
+
+    <androidx.cardview.widget.CardView
+        card_view:cardElevation="5dp"
+        android:textAlignment="center"
+        android:clickable="true"
+        card_view:cardBackgroundColor="#F4DBD3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="15dp">
+
+    <androidx.cardview.widget.CardView
+        card_view:cardElevation="5dp"
+        android:textAlignment="center"
+        android:clickable="true"
+        android:layout_margin="10dp"
+        card_view:cardBackgroundColor="#F6E3DD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="15dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:screenReaderFocusable="true"
+            android:layout_margin="15dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="pet isim"
+        android:textSize="25dp"
+        android:id="@+id/petisimText_asi"
+        android:textAlignment="center"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textColor="#F3420A">
+
+    </TextView>
+
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="wrap_content"
+                card_view:cardElevation="20dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                card_view:cardBackgroundColor="#F3CEC2"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="25dp"
+                android:layout_alignParentBottom="true"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"></LinearLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="120dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/petImageView_asi"
+                    android:layout_height="120dp">
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="pet Bilgiiiii"
+                android:textSize="20dp"
+                android:id="@+id/petBilgiText_asi"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:textColor="#FD511A">
+
+            </TextView>
+
+
+</LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

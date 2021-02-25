@@ -1,6 +1,7 @@
 package com.example.mpets.RestApi;
 
 import com.example.mpets.Models.AnswersModel;
+import com.example.mpets.Models.AsiModel;
 import com.example.mpets.Models.AskQuestionModel;
 import com.example.mpets.Models.CampaignModel;
 import com.example.mpets.Models.DeleteAnswerModel;
@@ -45,5 +46,10 @@ public interface RestApi {
 
     @GET("/veterinary/kampanya.php")
     Call<List<CampaignModel>> getKampanya();
+
+    @FormUrlEncoded
+    @POST("/veterinary/asitakip.php")
+    Call<List<AsiModel>> getAsi(@Field("id") String id);
+
 
 }
