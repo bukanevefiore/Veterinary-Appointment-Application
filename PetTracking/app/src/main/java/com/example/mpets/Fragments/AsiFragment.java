@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.example.mpets.Models.AsiModel;
 import com.example.mpets.R;
 import com.example.mpets.RestApi.ManagerAll;
+import com.example.mpets.Utils.GetSharedPreferences;
 import com.google.android.material.textfield.TextInputEditText;
 import com.squareup.picasso.Picasso;
 import com.squareup.timessquare.CalendarPickerView;
@@ -45,6 +46,8 @@ public class AsiFragment extends Fragment {
     private Date today;
     private List<AsiModel> asiList;
     private List<Date> dateList;  // pickerview in işeretlenmiş halini bize getirir
+    private String id;
+    GetSharedPreferences getSharedPreferences;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -73,13 +76,16 @@ public class AsiFragment extends Fragment {
         asiList=new ArrayList<>();
         dateList=new ArrayList<>();
 
+        getSharedPreferences=new GetSharedPreferences(getActivity());
+        id=getSharedPreferences.getSession().getString("id",null);
+
 
     }
 
     // aşı bilgilerini getirmme işlemleri
     public void asiTakipRequest(){
 
-        Call<List<AsiModel>> request= ManagerAll.getInstance().getAsi("1");
+        Call<List<AsiModel>> request= ManagerAll.getInstance().getAsi(id);
         request.enqueue(new Callback<List<AsiModel>>() {
             @Override
             public void onResponse(Call<List<AsiModel>> call, Response<List<AsiModel>> response) {

@@ -86,6 +86,8 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+                changeFragments.change(new SanalPetKarneFragment());
+
             }
         });
         card_view_asılar.setOnClickListener(new View.OnClickListener() {
