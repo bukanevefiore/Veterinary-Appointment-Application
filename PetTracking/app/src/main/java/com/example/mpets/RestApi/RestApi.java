@@ -2,6 +2,7 @@ package com.example.mpets.RestApi;
 
 import com.example.mpets.Models.AnswersModel;
 import com.example.mpets.Models.AskQuestionModel;
+import com.example.mpets.Models.CampaignModel;
 import com.example.mpets.Models.DeleteAnswerModel;
 import com.example.mpets.Models.LoginModel;
 import com.example.mpets.Models.PetModel;
@@ -12,6 +13,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface RestApi {
@@ -40,4 +42,8 @@ public interface RestApi {
     @FormUrlEncoded
     @POST("/veterinary/cevapsil.php")
     Call<DeleteAnswerModel> deleteAnswer(@Field("cevapid") String cevapid, @Field("soruid") String soruid);
+
+    @GET("/veterinary/kampanya.php")
+    Call<List<CampaignModel>> getKampanya();
+
 }

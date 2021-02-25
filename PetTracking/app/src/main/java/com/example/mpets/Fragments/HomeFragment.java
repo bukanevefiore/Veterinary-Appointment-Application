@@ -115,6 +115,8 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+                changeFragments.change(new CampaignFragment());
+
             }
         });
         card_view_iletisim.setOnClickListener(new View.OnClickListener() {
