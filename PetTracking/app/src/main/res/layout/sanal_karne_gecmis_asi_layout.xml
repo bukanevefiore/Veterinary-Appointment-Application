@@ -18,7 +18,7 @@
             card_view:cardElevation="5dp"
             android:textAlignment="center"
             android:clickable="true"
-            android:id="@+id/sanalKarneCardView"
+            android:id="@+id/sanalKarneCardVieww"
             android:layout_margin="10dp"
             card_view:cardBackgroundColor="#F6E3DD"
             android:layout_width="match_parent"
@@ -38,7 +38,7 @@
                     android:layout_height="50dp"
                     android:text="pet isim"
                     android:textSize="25dp"
-                    android:id="@+id/sanalKarnePetText"
+                    android:id="@+id/sanalKarneGecmisAsiText"
                     android:textAlignment="center"
                     android:layout_marginTop="5dp"
                     android:textStyle="bold"
@@ -70,7 +70,7 @@
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="120dp"
                         android:layout_gravity="center"
-                        android:id="@+id/sanalKarnePetImage"
+                        android:id="@+id/sanalKarneGecmiasAsiImagee"
                         android:layout_height="120dp">
                     </de.hdodenhof.circleimageview.CircleImageView>
 
@@ -81,7 +81,7 @@
                     android:layout_height="wrap_content"
                     android:text="pet Bilgiiiii"
                     android:textSize="20dp"
-                    android:id="@+id/sanalKarnePetBilgi"
+                    android:id="@+id/sanalKarneGecmisAsiBilgi"
                     android:textAlignment="center"
                     android:layout_marginTop="5dp"
                     android:textStyle="bold"

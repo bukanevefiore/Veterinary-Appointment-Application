@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     SharedPreferences sharedPreferences;
     GetSharedPreferences getSharedPreferences;
-    MaterialButtonToggleGroup home_menu_buton;
+    MaterialButtonToggleGroup home_menu_buton,aramaYapButon,cikisYapButon;
     ChangeFragments changeFragments;
 
     @Override
@@ -45,10 +46,33 @@ public class MainActivity extends AppCompatActivity {
         home_menu_buton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 changeFragments.change(new HomeFragment());
             }
         });
 
+        cikisYapButon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSharedPreferences=new GetSharedPreferences(MainActivity.this);
+                getSharedPreferences.deleteToSession();   // session temizleem
+                Intent intent=new Intent(MainActivity.this,MainActivity.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+
+        // arama yapma
+        aramaYapButon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("tel:00000000000"));
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -56,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
         getSharedPreferences=new GetSharedPreferences(MainActivity.this);
         sharedPreferences=getSharedPreferences.getSession();
         home_menu_buton=findViewById(R.id.home_menu_buton);
+        aramaYapButon=findViewById(R.id.aramaYapButon);
+        cikisYapButon=findViewById(R.id.cikisYapButon);
     }
 
     public void kontrol(){

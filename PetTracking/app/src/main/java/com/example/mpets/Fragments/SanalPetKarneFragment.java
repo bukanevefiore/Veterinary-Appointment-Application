@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.mpets.Adapters.PetsAdapter;
 import com.example.mpets.Adapters.SanalKarnePetsAdapter;
+import com.example.mpets.Models.AsiModel;
 import com.example.mpets.Models.PetModel;
 import com.example.mpets.R;
 import com.example.mpets.RestApi.ManagerAll;
@@ -91,4 +92,6 @@ public class SanalPetKarneFragment extends Fragment {
             }
         });
     }
+
+
 }

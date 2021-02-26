@@ -31,4 +31,13 @@ public class GetSharedPreferences {
         editor.putString("mailAdres",mailAdres);
         editor.commit();  // kalıcı giriş
     }
+
+    // uygulamadan çıkış yapma işlemi için
+    public void deleteToSession(){
+
+        sharedPreferences=activity.getApplicationContext().getSharedPreferences("session",0);
+        SharedPreferences.Editor editor=sharedPreferences.edit();
+        editor.clear();
+        editor.commit();
+    }
 }
