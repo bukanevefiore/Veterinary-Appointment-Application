@@ -52,7 +52,7 @@ public class SanalKarnePetsAdapter extends RecyclerView.Adapter<SanalKarnePetsAd
         }
 
         try {
-            Picasso.get().load("http://192.168.1.4/veterinary/"+list.get(position).getPetresim()).into(holder.sanalKarnePetImage);
+            Picasso.get().load("http://localhost/veterinary/"+list.get(position).getPetresim()).into(holder.sanalKarnePetImage);
         }catch(Exception e){
             Log.e("resimhata",e.getMessage());
         }

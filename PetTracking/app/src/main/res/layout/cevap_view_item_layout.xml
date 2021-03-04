@@ -9,6 +9,19 @@
         android:textAlignment="center"
         android:clickable="true"
         android:layout_margin="5dp"
+        card_view:cardBackgroundColor="#B19A54"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="15dp">
+
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        card_view:cardElevation="5dp"
+        android:textAlignment="center"
+        android:clickable="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="5dp"
         card_view:cardBackgroundColor="#FDDF86"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,4 +69,6 @@
     </LinearLayout>
 
     </androidx.cardview.widget.CardView>
-</LinearLayout>
+</androidx.cardview.widget.CardView>
+
+    </LinearLayout>

@@ -47,7 +47,7 @@ public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.ViewHolder>{
         holder.pet_cins_name.setText("Pet Genus : "+list.get(position).getPetcins().toString());
 
         try {
-            Picasso.get().load("http://192.168.1.4/veterinary/"+list.get(position).getPetresim()).into(holder.pet_fragment_image);
+            Picasso.get().load("http://localhost/veterinary/"+list.get(position).getPetresim()).into(holder.pet_fragment_image);
         }catch(Exception e){
             Log.e("resimhata",e.getMessage());
         }

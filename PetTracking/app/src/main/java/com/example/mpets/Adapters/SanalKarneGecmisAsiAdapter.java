@@ -50,7 +50,7 @@ public class SanalKarneGecmisAsiAdapter extends RecyclerView.Adapter<SanalKarneG
         }
 
         try {
-            Picasso.get().load("http://192.168.1.4/veterinary/"+list.get(position).getPetresim()).into(holder.sanalKarneGecmiasAsiImagee);
+            Picasso.get().load("http://localhost/veterinary/"+list.get(position).getPetresim()).into(holder.sanalKarneGecmiasAsiImagee);
         }catch(Exception e){
             Log.e("resimhata",e.getMessage());
         }

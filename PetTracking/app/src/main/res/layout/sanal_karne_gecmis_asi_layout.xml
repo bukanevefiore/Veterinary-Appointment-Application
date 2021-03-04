@@ -9,7 +9,7 @@
         card_view:cardElevation="5dp"
         android:textAlignment="center"
         android:clickable="true"
-        card_view:cardBackgroundColor="#F4DBD3"
+        card_view:cardBackgroundColor="#C9F19D"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         card_view:cardCornerRadius="15dp">
@@ -19,8 +19,9 @@
             android:textAlignment="center"
             android:clickable="true"
             android:id="@+id/sanalKarneCardVieww"
-            android:layout_margin="10dp"
-            card_view:cardBackgroundColor="#F6E3DD"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="5dp"
+            card_view:cardBackgroundColor="#DCF1C5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             card_view:cardCornerRadius="15dp">
@@ -42,7 +43,7 @@
                     android:textAlignment="center"
                     android:layout_marginTop="5dp"
                     android:textStyle="bold"
-                    android:textColor="#F3420A">
+                    android:textColor="#63AF10">
 
                 </TextView>
 
@@ -56,7 +57,7 @@
                     android:layout_marginLeft="3dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="20dp"
-                    card_view:cardBackgroundColor="#F3CEC2"
+                    card_view:cardBackgroundColor="#CEEDAB"
                     android:layout_height="wrap_content"
                     card_view:cardCornerRadius="25dp"
                     android:layout_alignParentBottom="true"
@@ -85,7 +86,7 @@
                     android:textAlignment="center"
                     android:layout_marginTop="5dp"
                     android:textStyle="bold"
-                    android:textColor="#FD511A">
+                    android:textColor="#585C53">
 
                 </TextView>
 
