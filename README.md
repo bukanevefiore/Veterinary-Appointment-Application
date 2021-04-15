@@ -1,6 +1,6 @@
 # Veterinary Appointment Application
  Application preview
-https://user-images.githubusercontent.com/59068120/109924101-d5fb7380-7cd0-11eb-906c-a96a87724736.mp4A
+
 The pet tracking application I developed for the user from 2 different interactive applications of the user and the veterinarian that I developed within the scope of veterinary pet tracking.
 
 
